@@ -1,0 +1,182 @@
+#define COMBO_TERM_FAST   18
+#define COMBO_TERM_SLOW   50
+#define COMBO_TERM_SLOWER 100
+#define COMBO_PRIOR_IDLE  150
+
+
+// sourced from urob/zmk-node-free
+// if called with 4 args from zmk_combo, then
+//   5 is combo_6, 6 is combo_5 and FUNC is combo_4
+// if called with 5 args from zmk_combo, then
+//   6 is combo_5, FUNC is combo_5, and combo_4 is in the '...'
+// if called with 6 args from zmk_combo, then
+//   FUNC is combo_6, and combo_4 and combo_5 are in the '...'
+// the macro is replaced with FUNC
+#define MACRO_CHOOSER5(_1, _2, _3, _4, _5, _6, FUNC, ...) FUNC
+
+#define ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout, prior_idle) \
+  / { \
+    combos { \
+      compatible = "zmk,combos"; \
+      combo_ ## name { \
+        bindings = <combo_bindings>; \
+        key-positions = <keypos>; \
+        layers = <combo_layers>; \
+        timeout-ms = <combo_timeout>; \
+        require-prior-idle-ms = <prior_idle>; \
+      }; \
+    }; \
+  };
+
+#define ZMK_COMBO_4_ARGS(name, combo_bindings, keypos, combo_layers) \
+    ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, COMBO_TERM_SLOW, COMBO_PRIOR_IDLE)
+
+#define ZMK_COMBO_5_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout) \
+    ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout, COMBO_PRIOR_IDLE)
+
+// var args gets spread here so the macro will be called with
+// 4, 5 or 6 args plus the funcs, so 5 6 or 7 args total
+#define ZMK_COMBO(...) MACRO_CHOOSER5(__VA_ARGS__, ZMK_COMBO_6_ARGS, ZMK_COMBO_5_ARGS, ZMK_COMBO_4_ARGS)(__VA_ARGS__)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1  <----<ing>---->  RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1  <----<the>---->  RM1 RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(ing, &ing, LT0 RT0, DEF)
+ZMK_COMBO(the, &the, LM0 RM0, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2  <--L̶T̶0̶---<and>---R̶T̶0̶-->  RT2 RT3 RT4 │
+  │ LM4 LM3 LM2  <--L̶M̶1̶-<CAPSWRD>-R̵M̵0̵-->  RT2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+// use fast timeout here, since I keep hitting this accidently
+// when typing clojure
+ZMK_COMBO(and,       &and,       LT1 RT1, DEF, COMBO_TERM_FAST)
+ZMK_COMBO(caps_word, &caps_word, LM1 RM1, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 -< .␣⇧ >- RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(space_shift, &dot_space_shift, LH0 RH0, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 -< _ >-     │     -< - >- RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 -< + >-     │     -< = >- RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 -< | >-     │     -< \ >- RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(lodash, &kp UNDERSCORE, LT0 LT1, DEF)
+ZMK_COMBO(plus,   &kp PLUS, LM0 LM1, DEF)
+ZMK_COMBO(pipe,   &kp PIPE, LB1 LB0, DEF)
+
+ZMK_COMBO(minus,           &kp MINUS, RT0 RT1, DEF)
+ZMK_COMBO(equal,           &kp EQUAL, RM0 RM1, DEF)
+ZMK_COMBO(backslash_slash, &kp BACKSLASH, RB0 RB1, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 ┌ <  ┬  { ┐ LT0     │     RT0 ┌ }  ┬  > ┐ RT4 │
+  │ LM4 └ [  ┴  ( ┘ LM0     │     RM0 └ )  ┴  ] ┘ RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+    // {
+    // use fast timeout here, since this is 're' and
+    // I end up triggering it accidently
+ZMK_COMBO(l_curly, &kp LBRC, LT2 LT1, DEF, COMBO_TERM_FAST)
+    // <
+ZMK_COMBO(l_angle, &kp LESS_THAN, LT3 LT2, DEF)
+    // [
+ZMK_COMBO(l_square, &kp LBKT, LM3 LM2, DEF)
+    // (
+ZMK_COMBO(l_par, &kp LPAR, LM2 LM1, DEF)
+
+    // }
+ZMK_COMBO(r_curly, &kp RBRC, RT1 RT2, DEF)
+    // >
+ZMK_COMBO(r_angle, &kp GREATER_THAN, RT2 RT3, DEF)
+    // )
+ZMK_COMBO(r_par, &kp RPAR, RM1 RM2, DEF)
+    // ]
+ZMK_COMBO(r_square, &kp RBKT, RM2 RM3, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
+  │ LB4 -<ESC>- LB1 LB0     │     RB0 RB1 -<ENT>- RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+
+// make prior idle smaller, these are mapped to
+// ,/. and x/c which are not normally hit in order
+ZMK_COMBO(esc, &kp ESC, LB3 LB2, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(ent, &kp RET, RB2 RB3, DEF, COMBO_TERM_SLOWER, 0)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
+  │ -< ~ >- LB2 LB1 LB0     │     RB0 RB1 RB2 --<`>-- │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+
+ZMK_COMBO(tilde, &kp TILDE, LB4 LB3, DEF)
+ZMK_COMBO(grave, &kp GRAVE, RB3 RB4, DEF)
+
+/*
+  ╭──────────────┬───┬──────┬──────┬──────────────────╮
+  │ LT4 LT3 LT2  #   ^      │      $   *  RT2 RT3 RT4 │
+  │ LM4 LM3 LM2  ┴   ┼      │      ┼   ┴  RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1  @      │      !  RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(hash,  &kp HASH,  LT1 LM1, DEF)
+ZMK_COMBO(caret, &kp CARET, LT0 LM0, DEF)
+ZMK_COMBO(at,    &kp AT,    LM0 LB0, DEF)
+
+ZMK_COMBO(dllr, &kp DLLR, RM0 RT0, DEF)
+ZMK_COMBO(excl, &kp EXCL, RM0 RB0, DEF)
+ZMK_COMBO(star, &kp STAR, RM1 RT1, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2   ⤥ LM0     │     RM0 ⤦   RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1  %      │      &  RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(prcnt, &kp PRCNT, LM1 LB0, DEF)
+ZMK_COMBO(ampr,  &kp AMPS, RB0 RM1, DEF)
+
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0     │     RT0 ---< -> >-- RT4 │
+  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+// outputs -> or => on shift press
+// common for clojure threading and a pain to build with above combos
+ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)

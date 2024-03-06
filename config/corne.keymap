@@ -32,16 +32,17 @@
 #define SECRTHMB  &ltsk  FUN      RCTRL //  tap for sticky ctrl : hold for function layer
 
 // shorter codes
-#define BPSTE    &kp  K_PASTE
-#define BCPY     &kp  K_COPY
-#define BCUT     &kp  K_CUT
-#define BUNDO    &kp  K_UNDO
-#define BREDO    &kp  K_REDO
-#define BPREV    &kp  K_PREV
-#define BNEXT    &kp  K_NEXT
-#define BPLYPSE  &kp  K_PP
+#define LOCK     &kp  LG(LC(Q))
+#define BPSTE    &kp  LG(V)
+#define BCPY     &kp  LG(C)
+#define BCUT     &kp  LG(X)
+#define BUNDO    &kp  LG(Z)
+#define BREDO    &kp  LG(LS(Z))
+#define BPREV    &kp  C_PREV
+#define BNEXT    &kp  C_NEXT
+#define BPLYPSE  &kp  C_PLAY_PAUSE
 #define BMUTE    &kp  K_MUTE
-#define BSTOP    &kp  K_STOP2
+#define BSTOP    &kp  C_PLAY_PAUSE
 #define BVOLD    &kp  K_VOL_DN
 #define BVOLU    &kp  K_VOL_UP
 #define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
@@ -80,8 +81,8 @@
     number_layer { // layer 1 (numbers)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       _x_
+// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   LOCK   │
+    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       LOCK
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │    1    │    2    │    3    │    4    │    5    │   │     6   │    7    │    8    │    9    │    0    │
     HRML(N1,     N2,       N3,       N4)    &kp N5        &kp N6    HRMR(N7,     N8,       N9,       N0)

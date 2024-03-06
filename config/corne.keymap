@@ -45,6 +45,8 @@
 #define BSTOP    &kp  C_PLAY_PAUSE
 #define BVOLD    &kp  K_VOL_DN
 #define BVOLU    &kp  K_VOL_UP
+#define BRIUP    &kp  C_BRIGHTNESS_INC
+#define BRIDOWN  &kp  C_BRIGHTNESS_DEC
 #define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
 #define ___      &trans      //  transparent
 #define _x_      &none
@@ -116,8 +118,8 @@
     media_layer { // layer 5 (media)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       _x_
+// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   BRIDOWN   │   BRIUP   │   NOP   │
+    _x_       _x_       _x_       _x_       _x_           _x_       _x_       BRIDOWN       BRIUP       _x_
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │ SHIFT   │  CTRL   │   ALT   │   SUPER │   NOP   │   │   NOP   │PREV_TRCK│ VOl_DOWN│  VOL_UP │NEXT_TRCK│
     &kp LSHFT &kp LCTRL  &kp LALT &kp LGUI  _x_           OUTTOG    BPREV     BVOLD     BVOLU     BNEXT

@@ -83,8 +83,8 @@
     number_layer { // layer 1 (numbers)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   LOCK   │
-    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       LOCK
+// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
+    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       _x_
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │    1    │    2    │    3    │    4    │    5    │   │     6   │    7    │    8    │    9    │    0    │
     HRML(N1,     N2,       N3,       N4)    &kp N5        &kp N6    HRMR(N7,     N8,       N9,       N0)
@@ -118,8 +118,8 @@
     media_layer { // layer 5 (media)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   BRIDOWN   │   BRIUP   │   NOP   │
-    _x_       _x_       _x_       _x_       _x_           _x_       _x_       BRIDOWN       BRIUP       _x_
+// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │ BRIDOWN │   BRIUP │   LOCK  │
+    _x_       _x_       _x_       _x_       _x_           _x_       _x_        BRIDOWN     BRIUP    LOCK
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │ SHIFT   │  CTRL   │   ALT   │   SUPER │   NOP   │   │   NOP   │PREV_TRCK│ VOl_DOWN│  VOL_UP │NEXT_TRCK│
     &kp LSHFT &kp LCTRL  &kp LALT &kp LGUI  _x_           OUTTOG    BPREV     BVOLD     BVOLU     BNEXT

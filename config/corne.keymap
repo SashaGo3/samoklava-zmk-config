@@ -24,7 +24,7 @@
 
 // Layer switching
 #define SECLTHMB  &ltsk  MEDIA    LSHIFT  // tap for sticky shift : hold for media layer
-#define PRMLTHMB  &ltr   NUM      0      //  zero here because key-repeat does not take arguments
+#define PRMLTHMB  &ltr   NUM      DELETE      //  zero here because key-repeat does not take arguments
 #define TERLTHMB  &mt    LSHIFT   TAB   //   tap for tab : hold for shift
 
 #define TERRTHMB  &lt    NAV      SPACE
@@ -144,8 +144,8 @@
 // │   F10   │   F1    │   F2    │   F3    │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
     &kp F10   &kp F1    &kp F2    &kp F3    _x_           _x_       _x_       _x_       _x_       _x_
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                     │   APP   │  SPACE  │   TAB   │   │   NOP   │   NOP   │   NOP   │
-                        &kp K_APP &kp SPACE &kp TAB       _x_       _x_       ___
+//                     │ CAPSLOCK│  SPACE  │   TAB   │   │   NOP   │   NOP   │   NOP   │
+                        &kp CAPSLOCK &kp SPACE &kp TAB       _x_       _x_       ___
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };

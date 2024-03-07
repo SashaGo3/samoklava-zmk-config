@@ -124,8 +124,8 @@
 // │ SHIFT   │  CTRL   │   ALT   │   SUPER │   NOP   │   │   NOP   │PREV_TRCK│ VOl_DOWN│  VOL_UP │NEXT_TRCK│
     &kp LSHFT &kp LCTRL  &kp LALT &kp LGUI  _x_           OUTTOG    BPREV     BVOLD     BVOLU     BNEXT
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │BTPROF 0 │BTPROF 1 │BTPROF 2 │BTPROF 3 │BTROF 4  │// shift to clear profile
-    _x_       _x_       _x_       &bt BT_CLR _x_          &btsc_0   &btsc_1   &btsc_2   &btsc_3   &btsc_4
+// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │    NOP 0    │NOP 1     NOP 2     NOP 3      NOP 4  │// shift to clear profile
+    _x_       _x_       _x_       _x_        _x_          _x_       _x_       _x_       _x_       _x_
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                     │   NOP   │   NOP   │   NOP   │   │  STOP   │Pause/Ply│  MUTE   │
                         ___       _x_       _x_           BSTOP     BPLYPSE   BMUTE

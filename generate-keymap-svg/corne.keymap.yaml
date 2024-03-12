@@ -32,7 +32,7 @@ layers:
   - {t: ., s: ':'}
   - /
   - {t: Sticky Shift(⇧), h: MEDIA}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: number}
+  - {t: '$$mdi:backspace$$', h: number}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant-outline$$'}
   - {t: '$$mdi:backspace$$', h: ⌫}

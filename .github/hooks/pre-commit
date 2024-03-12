@@ -1,0 +1,1 @@
+keymap -c generate-keymap-svg/corne.keymap.config.yaml parse -z ./config/corne.keymap > generate-keymap-svg/corne.keymap.yaml && keymap -c generate-keymap-svg/corne.keymap.config.yaml draw generate-keymap-svg/corne.keymap.yaml > ./assets/corne.svg

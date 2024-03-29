@@ -21,10 +21,10 @@
 //          tap        │ SK SHFT │  BSPC   │  Tab    │   │  SPACE  │  BSPC   │ SK CMD  │
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
 
-// Thumb default keys
-#define SECLTHMB  &ltsk  LSHFT   SPACE  // tap for sticky Shift : hold for Space
-#define PRMLTHMB  &ltr   NUM     BSPC     
-#define TERLTHMB  &mt    LSHFT   TAB   //   tap for Tab : hold for Shift
+// Thumb default         hold     tap
+#define SECLTHMB  &ltsk  SPACE    LSHFT  // tap for sticky Shift : hold for Space
+#define PRMLTHMB  &ltr   NUM      BSPC     
+#define TERLTHMB  &mt    LSHFT    TAB   //   tap for Tab : hold for Shift
 
 #define TERRTHMB  &lt    NAV      SPACE
 #define PRMRTHMB  &mt    LA(BSPC) BSPC   // tap gives you Backspace : long tap gives you delete word
@@ -33,9 +33,10 @@
 // Hold taps
 // hold or tap
 #define MEDIA_Q  &ltr MEDIA  Q
-#define SCRSHT   &kp  LS(LG(N1))
+
 
 // shorter codes
+#define SCRSHT   &kp  LS(LG(N1))
 #define LOCK     &kp  LG(LC(Q))
 #define SHENTER  &kp  LS(RET)
 #define BPSTE    &kp  LG(V)

@@ -310,7 +310,7 @@ parse_config:
     '&reset_td': "🔄"
     '&dot_space_shift': ".⎵⇧"
 
-    "&ltsk LSHFT SPACE":
+    "&ltsk SPACE LSHFT":
       tap: Sticky ⇧
       hold: $$mdi:keyboard-space$$
 

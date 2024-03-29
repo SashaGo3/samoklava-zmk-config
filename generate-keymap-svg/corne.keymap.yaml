@@ -192,6 +192,9 @@ combos:
 - p: [14, 15]
   k: ⇧+↵
   l: [default]
+- p: [24, 25]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [default]
 - p: [32, 33]
   k: .⎵⇧
   l: [default]

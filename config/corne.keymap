@@ -83,17 +83,17 @@
     number_layer { // layer 1 (numbers)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-// │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-    _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_       _x_       _x_
+// │   NOP   │    7    │    8    │    9    │    0    │   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
+       _x_    &kp N7    &kp N8    &kp N9    &kp N0           _x_       _x_       _x_       _x_       _x_
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │    1    │    2    │    3    │    4    │    5    │   │     6   │    7    │    8    │    9    │    0    │
-    HRML(N1,     N2,       N3,       N4)    &kp N5        &kp N6    HRMR(N7,     N8,       N9,       N0)
+// │   ,/;   │    4    │    5    │    6    │   ./:   │   │    =    │    +    │    -    │    *    │    /    │
+    &cma_smi  &kp N4    &kp N5    &kp N6    &dot_cln      &kp EQUAL &kp PLUS  &kp MINUS &kp STAR  &kp FSLH
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │  UNDO   │   CUT   │  COPY   │  PASTE  │  REDO   │   │   NOP   │   NOP   │   NOP   │   ./:   │   NOP   │
-      BUNDO     BCUT      BCPY      BPSTE     BREDO           _x_       _x_       _x_    &dot_cln     _x_
+// │   NOP   │   1     │    2    │    3    │   NOP   │   │   NOP   │   NOP   │   ,/;   │   ./:   │    /    │
+       _x_     &kp N1     &kp N2    &kp N3     _x_           _x_       _x_    &cma_smi  &dot_cln  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                     │   NOP   │   NOP   │   NOP   │   │  SPACE  │   NOP   │  ENTER  │
-                        _x_       ___       _x_           &kp SPACE &kp BSPC  &kp RET
+//                     │   NOP   │   NOP   │   NOP   │   │  SPACE  │ Delete  │  ENTER  │
+                           _x_       ___       _x_        &kp SPACE &kp DEL   &kp RET
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };
@@ -105,7 +105,7 @@
     _x_       _x_       _x_       _x_       _x_              BREDO     BCUT     BCPY      BPSTE     BUNDO
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │ SHIFT   │  CTRL   │   ALT   │   SUPER │   NOP   │   │  LEFT   │  DOWN   │    UP   │  RIGHT  │   NOP   │
-    &kp LSHFT &kp LCTRL  &kp LALT &kp LGUI  _x_           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT _x_
+    &kp LSHFT &kp LCTRL  &kp LALT &kp LGUI  _x_           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT    _x_
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   │  HOME   │  PGDN   │   PGUP  │   END   │  INSERT │
     _x_       _x_       _x_       _x_       _x_           &kp HOME  &kp PG_DN &kp PG_UP  &kp END  &kp INS
@@ -128,7 +128,7 @@
     _x_       _x_       _x_       _x_        _x_          _x_       _x_       _x_       _x_       _x_
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                     │   NOP   │   NOP   │   NOP   │   │  STOP   │Pause/Ply│  MUTE   │
-                        ___       _x_       _x_           BSTOP     BPLYPSE   BMUTE
+                          ___       _x_       _x_           BSTOP     BPLYPSE   BMUTE
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };

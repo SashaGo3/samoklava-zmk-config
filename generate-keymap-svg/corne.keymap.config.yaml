@@ -150,7 +150,7 @@ draw_config:
          */
 
         font-family: REM,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 24px;
+        font-size: 20px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: var(--color--text);
@@ -310,28 +310,29 @@ parse_config:
     '&reset_td': "🔄"
     '&dot_space_shift': ".⎵⇧"
 
-    "&ltsk MEDIA LSHIFT":
-      tap: Sticky Shift(⇧)
-      hold: MEDIA
-    "&ltr NUM 0":
-      tap: $$mdi:repeat-variant$$
-      hold: $$mdi:numeric$$
+    "&ltsk LSHFT LSHFT":
+      tap: Sticky
+      hold: ⇧
 
     "&ltsk NUM BSPC":
       tap: $$mdi:backspace-outline$$
       hold: $$mdi:numeric$$
 
-    "&lt MOUSE ESC":
-      tap: $$mdi:keyboard-esc$$
-      hold: $$mdi:mouse$$
+    "&mt SPACE TAB":
+      tap: $$mdi:keyboard-tab$$
+      hold: $$mdi:keyboard-space$$
 
     "&lt NAV SPACE":
       tap: $$mdi:keyboard-space$$
       hold: $$mdi:navigation-variant-outline$$
 
-    "&lt FUN RET":
-      tap: $$mdi:keyboard-return$$
+    "&ltsk FUN LGUI":
+      tap: Sticky CMD
       hold: $$mdi:function-variant$$
+
+    "&mt LA(BSPC) BSPC":
+      tap: $$mdi:backspace-outline$$
+      hold: 'Rmv Word'
 
     # Bluetooth
     "&bt BT_SEL 0":
@@ -380,7 +381,7 @@ parse_config:
   trans_legend:
     tap: $$mdi:transfer$$
     type: trans
-  mark_alternate_layer_activators: false
+  mark_alternate_layer_activators: true
   zmk_keycode_map:
     EXCLAMATION: '!'
     EXCL: '!'
@@ -516,11 +517,20 @@ parse_config:
     # Bluetooth
     BT_CLR: $$mdi:bluetooth-off$$
     BT_SEL: $$mdi:bluetooth-connect$$
+
+    # Other
     LG(LS(Z)): $$mdi:redo$$
     LG(V): $$mdi:content-paste$$
     LG(C): $$mdi:content-copy$$
     LG(X): $$mdi:content-cut$$
     LG(Z): $$mdi:undo-variant$$
     LG(LC(Q)): "Lock"
+    LG(S): $$mdi:content-save-all$$
+    LS(RET): "⇧+↵"
+    LC(UP): "Show apps"
+    LC(LEFT): "⌃+←"
+    LC(RIGHT): "⌃+→"
+    LS(LG(J)): "Meeting"
+    LS(LG(N1)): "Screenshot"
 
   zmk_combos: {}

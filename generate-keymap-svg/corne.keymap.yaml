@@ -31,9 +31,9 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
-  - {t: Sticky, h: ⇧}
+  - {t: Sticky ⇧, h: '$$mdi:keyboard-space$$'}
   - {t: '$$mdi:backspace$$', h: number}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: ⇧}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant-outline$$'}
   - {t: '$$mdi:backspace-outline$$', h: Rmv Word}
   - {t: Sticky CMD, h: '$$mdi:function-variant$$'}

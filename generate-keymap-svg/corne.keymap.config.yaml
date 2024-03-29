@@ -310,17 +310,17 @@ parse_config:
     '&reset_td': "🔄"
     '&dot_space_shift': ".⎵⇧"
 
-    "&ltsk LSHFT LSHFT":
-      tap: Sticky
-      hold: ⇧
+    "&ltsk LSHFT SPACE":
+      tap: Sticky ⇧
+      hold: $$mdi:keyboard-space$$
 
     "&ltsk NUM BSPC":
       tap: $$mdi:backspace-outline$$
       hold: $$mdi:numeric$$
 
-    "&mt SPACE TAB":
+    "&mt LSHFT TAB":
       tap: $$mdi:keyboard-tab$$
-      hold: $$mdi:keyboard-space$$
+      hold: ⇧
 
     "&lt NAV SPACE":
       tap: $$mdi:keyboard-space$$

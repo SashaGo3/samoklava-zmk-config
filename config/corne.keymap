@@ -17,14 +17,14 @@
 
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                     │SEC THMB │PRM THMB │TER THMB │   │TER THMB │PRM THMB │SEC THMB │
-//         hold        │   SHFT  │  NUM    │ Space   │   │  NAV    │Alt+BSPC │  FUN    │
+//         hold        │   Space │  NUM    │ Shift   │   │  NAV    │Alt+BSPC │  FUN    │
 //          tap        │ SK SHFT │  BSPC   │  Tab    │   │  SPACE  │  BSPC   │ SK CMD  │
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
 
 // Thumb default keys
-#define SECLTHMB  &ltsk  LSHFT   LSHFT  // tap for sticky Shift : hold for Shift
-#define PRMLTHMB  &ltr   NUM      BSPC     
-#define TERLTHMB  &mt    SPACE   TAB   //   tap for Tab : hold for Shift
+#define SECLTHMB  &ltsk  LSHFT   SPACE  // tap for sticky Shift : hold for Space
+#define PRMLTHMB  &ltr   NUM     BSPC     
+#define TERLTHMB  &mt    LSHFT   TAB   //   tap for Tab : hold for Shift
 
 #define TERRTHMB  &lt    NAV      SPACE
 #define PRMRTHMB  &mt    LA(BSPC) BSPC   // tap gives you Backspace : long tap gives you delete word
@@ -101,7 +101,7 @@
 // │   NOP   │   1     │    2    │    3    │   NOP   │   │   NOP   │   NOP   │   ,/;   │   ./:   │    /    │
        _x_     &kp N1     &kp N2    &kp N3     _x_           _x_       _x_    &cma_smi  &dot_cln  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                     │   NOP   │   NUM    │   NOP   │   │  SPACE  │ Delete  │  ENTER  │
+//                     │   NOP   │  NUM    │   NOP   │   │  SPACE  │ Delete  │  ENTER  │
                            _x_       ___       _x_        &kp SPACE &kp DEL   &kp RET
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;

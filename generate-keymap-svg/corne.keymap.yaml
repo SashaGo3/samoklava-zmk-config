@@ -31,60 +31,60 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
-  - {t: Sticky ⇧, h: '$$mdi:keyboard-space$$'}
-  - {t: '$$mdi:backspace$$', h: number}
+  - {t: '$$mdi:backspace$$', h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: number}
   - {t: '$$mdi:keyboard-tab$$', h: ⇧}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant-outline$$'}
-  - {t: '$$mdi:backspace-outline$$', h: Rmv Word}
+  - {t: '$$mdi:keyboard-space$$', h: navigation}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: Sticky CMD, h: '$$mdi:function-variant$$'}
   number:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
   - '7'
   - '8'
   - '9'
   - '0'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ',', s: ;}
-  - '4'
-  - '5'
   - '6'
-  - {t: ., s: ':'}
-  - '='
-  - +
-  - '-'
-  - '*'
-  - /
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '1'
-  - '2'
-  - '3'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - /
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   navigation:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Screenshot
   - Show apps
   - ⌃+←
   - ⌃+→
-  - Meeting
-  - $$mdi:undo-variant$$
-  - $$mdi:content-cut$$
-  - $$mdi:content-copy$$
-  - $$mdi:content-paste$$
-  - $$mdi:redo$$
+  - LG(SPACE)
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
@@ -105,33 +105,33 @@ layers:
   - PG UP
   - END
   - INS
-  - ⇧+↵
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   media:
   - {type: held}
-  - Show apps
-  - ⌃+←
-  - ⌃+→
-  - Screenshot
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Lock
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Meeting
+  - $$mdi:undo-variant$$
+  - $$mdi:content-paste$$
+  - $$mdi:content-copy$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-6$$
   - $$mdi:brightness-7$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Lock
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Show apps
+  - ⌃+←
+  - ⌃+→
+  - LG(SPACE)
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Show apps
+  - ⌃+←
+  - ⌃+→
+  - LG(SPACE)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -149,36 +149,36 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   function:
-  - F12
-  - F7
-  - F8
   - F9
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F10
   - F11
-  - F4
+  - F12
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F5
   - F6
+  - F7
+  - F8
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - F10
   - F1
   - F2
   - F3
+  - F4
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '$$mdi:chevron-left$$', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:chevron-right$$'}
+  - OUT USB
+  - OUT BLE
+  - BT CLR ALL
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
@@ -196,7 +196,13 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [default]
 - p: [32, 33]
-  k: .⎵⇧
+  k: LG(SPACE)
+  l: [default]
+- p: [31, 34]
+  k: $$mdi:undo-variant$$
+  l: [default]
+- p: [30, 35]
+  k: $$mdi:redo$$
   l: [default]
 - p: [4, 3]
   k: _
@@ -244,12 +250,12 @@ combos:
   k: $$mdi:keyboard-esc$$
   l: [default]
 - p: [27, 28]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  k: ':'
   l: [default]
 - p: [20, 21]
   k: '~'
   l: [default]
-- p: [28, 29]
+- p: [8, 9]
   k: '`'
   l: [default]
 - p: [3, 13]

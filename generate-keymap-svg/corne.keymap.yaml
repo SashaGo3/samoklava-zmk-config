@@ -142,12 +142,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PREV
-  - PLAY PAUSE
-  - NEXT
   - $$mdi:volume-low$$
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
+  - PREV
+  - PLAY PAUSE
+  - NEXT
   function:
   - F9
   - F10

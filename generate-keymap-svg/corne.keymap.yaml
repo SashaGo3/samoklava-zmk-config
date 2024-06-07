@@ -113,9 +113,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   media:
   - {type: held}
-  - $$mdi:undo-variant$$
-  - $$mdi:content-paste$$
+  - $$mdi:content-cut$$
   - $$mdi:content-copy$$
+  - $$mdi:content-paste$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-6$$
   - $$mdi:brightness-7$$

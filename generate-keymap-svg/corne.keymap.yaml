@@ -246,7 +246,7 @@ combos:
 - p: [17, 18]
   k: ']'
   l: [default]
-- p: [0, 1]
+- p: [10, 11]
   k: $$mdi:keyboard-esc$$
   l: [default]
 - p: [21, 22]
@@ -255,17 +255,8 @@ combos:
 - p: [22, 23]
   k: $$mdi:content-paste$$
   l: [default]
-- p: [28, 29]
-  k: ':'
-  l: [default]
-- p: [18, 19]
-  k: ;
-  l: [default]
 - p: [27, 28]
   k: ''''
-  l: [default]
-- p: [26, 27]
-  k: '"'
   l: [default]
 - p: [20, 21]
   k: '~'

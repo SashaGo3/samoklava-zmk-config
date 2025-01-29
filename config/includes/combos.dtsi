@@ -111,16 +111,22 @@ ZMK_COMBO(r_square, &kp RBKT, RM2 RM3, DEF)
 /*
   ╭─────────────────────────┬─────────────────────────╮
   │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
-  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
-  │ LB4 -<ESC>- LB1 LB0     │     RB0 RB1 -<:>- RB4 │
+  │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 -<;>-   │
+  │ LB4 -<Copy + Paste>- LB0     │     RB0 RB0 -<'>- -<:>- │
   ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
               ╰─────────────┴─────────────╯
 */
 
 // make prior idle smaller, these are mapped to
 // ,/. and x/c which are not normally hit in order
-ZMK_COMBO(esc, &kp ESC, LB3 LB2, DEF, COMBO_TERM_SLOWER, 0)
-ZMK_COMBO(ent, &kp COLON, RB2 RB3, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(esc, &kp ESC, LT4 LT3, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(copyk, &kp LG(C), LB3 LB2, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(pastek, &kp LG(V), LB2 LB1, DEF, COMBO_TERM_SLOWER, 0)
+
+ZMK_COMBO(coln, &kp COLON, RB3 RB4, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(semicln, &kp SEMICOLON, RM3 RM4, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(apost, &kp SINGLE_QUOTE, RB2 RB3, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(apostw, &kp DOUBLE_QUOTES, RB1 RB2, DEF, COMBO_TERM_SLOWER, 0)
 
 /*
   ╭─────────────────────────┬─────────────────────────╮

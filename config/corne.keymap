@@ -33,7 +33,7 @@
 // shorter codes
 #define SCRSHT   &kp  LS(LG(N1))
 #define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
-#define ___      &trans      //  transparent
+#define ___      &trans      //  transparent 
 #define _x_      &none
 
 // Home row mods
@@ -54,7 +54,7 @@
 #define RIGHT_ACTIONS__________________________            &kp RSHFT    &kp RCTRL      &kp RALT         &kp RGUI
 #define DESKTOP_ACTIONS________________________            &kp  LC(UP)  &kp  LC(LEFT)  &kp  LC(RIGHT)   &kp LG(SPACE)
 #define LEFT_HOME_ROW__________________________            HRML(A,        S,        D,        F)
-#define RIGHT_HOME_ROW_________________________            HRMR(J,        K,        L,       SQT)
+#define RIGHT_HOME_ROW_________________________            HRMR(J,        K,        L,       SEMI)
 #define NOP_4__________________________________            &none         &none       &none       &none
 
 // Function rows
@@ -90,8 +90,8 @@
 // │    A    │    S    │    D    │    F    │    G    │   │    H    │    J    │    K    │    L    │    '    │
     LEFT_HOME_ROW__________________________    &kp G         &kp H  RIGHT_HOME_ROW_________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │    Z    │    X    │    C    │    V    │    B    │   │    N    │    M    │   ,/;   │   ./:   │    /    │
-    &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M     &cma_smi  &dot_cln  &kp FSLH
+// │    Z    │    X    │    C    │    V    │    B    │   │    N    │    M    │    ,    │    .    │    /    │
+    &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
                         BSPC_SP  SHFT_NUM  TAB_SHFT      SP_NAV  &kp BSPC    COM_FUN 
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯

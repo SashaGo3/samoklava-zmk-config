@@ -65,18 +65,6 @@ MAKE_BTSC(btsc_2, 2) // etc...
 MAKE_BTSC(btsc_3, 3)
 MAKE_BTSC(btsc_4, 4)
 
-// ### new shift morphs
-
-// Tap for comma, shift + tap for semicolon
-ZMK_BEHAVIOR(cma_smi, mod_morph, \
-  bindings = <&kp COMMA>, <&kp SEMI>; \
-  mods = <(MOD_LSFT)>; \
-)
-// Tap for period, shift + tap for colon
-ZMK_BEHAVIOR(dot_cln, mod_morph, \
-  bindings = <&kp DOT>, <&kp COLON>; \
-  mods = <(MOD_LSFT)>; \
-)
 
 // ### layer toggles
 

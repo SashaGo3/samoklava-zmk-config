@@ -79,7 +79,7 @@ layers:
   - Show apps
   - ⌃+←
   - ⌃+→
-  - LG(SPACE)
+  - ⌘+Space
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -126,12 +126,12 @@ layers:
   - Show apps
   - ⌃+←
   - ⌃+→
-  - LG(SPACE)
+  - ⌘+Space
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Show apps
   - ⌃+←
   - ⌃+→
-  - LG(SPACE)
+  - ⌘+Space
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -173,15 +173,15 @@ layers:
   - F2
   - F3
   - F4
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-caps$$
   - {h: '$$mdi:chevron-left$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:chevron-right$$'}
   - OUT USB
   - OUT BLE
   - BT CLR ALL
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-tab$$
+  - $$mdi:undo-variant$$
+  - $$mdi:redo$$
+  - Remove Word
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -196,7 +196,7 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [default]
 - p: [32, 33]
-  k: LG(SPACE)
+  k: ⌘+Space
   l: [default]
 - p: [31, 34]
   k: $$mdi:undo-variant$$

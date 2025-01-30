@@ -532,5 +532,7 @@ parse_config:
     LC(RIGHT): "⌃+→"
     LS(LG(J)): "Meeting"
     LS(LG(N1)): "Screenshot"
+    LA(BSPC): "Remove Word"
+    LG(SPACE): "⌘+Space"
 
   zmk_combos: {}

@@ -119,7 +119,6 @@ ZMK_COMBO(r_square, &kp RBKT, RM2 RM3, DEF)
 
 // make prior idle smaller, these are mapped to
 // ,/. and x/c which are not normally hit in order
-ZMK_COMBO(esc, &kp ESC, LM4 LM3, DEF, COMBO_TERM_SLOWER, 0)
 ZMK_COMBO(copyk, &kp LG(C), LB3 LB2, DEF, COMBO_TERM_SLOWER, 0)
 ZMK_COMBO(pastek, &kp LG(V), LB2 LB1, DEF, COMBO_TERM_SLOWER, 0)
 

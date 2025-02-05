@@ -53,7 +53,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -63,11 +63,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ':'
+  - '"'
+  - ','
+  - .
+  - /
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -245,9 +245,6 @@ combos:
   l: [default]
 - p: [17, 18]
   k: ']'
-  l: [default]
-- p: [10, 11]
-  k: $$mdi:keyboard-esc$$
   l: [default]
 - p: [21, 22]
   k: $$mdi:content-copy$$

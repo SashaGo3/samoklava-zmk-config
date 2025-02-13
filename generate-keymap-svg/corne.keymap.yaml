@@ -31,7 +31,7 @@ layers:
   - ','
   - .
   - /
-  - {t: '$$mdi:backspace$$', h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:backspace$$', h: shortcuts}
   - {t: '$$mdi:apple-keyboard-shift$$', h: number}
   - {t: '$$mdi:keyboard-tab$$', h: ⇧}
   - {t: '$$mdi:keyboard-space$$', h: navigation}
@@ -53,7 +53,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -63,8 +63,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ':'
   - '"'
+  - ':'
   - ','
   - .
   - /
@@ -113,9 +113,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   media:
   - {type: held}
-  - $$mdi:content-cut$$
-  - $$mdi:content-copy$$
-  - $$mdi:content-paste$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-6$$
   - $$mdi:brightness-7$$
@@ -179,15 +179,52 @@ layers:
   - OUT USB
   - OUT BLE
   - BT CLR ALL
-  - $$mdi:undo-variant$$
+  - ⌘+Z
   - $$mdi:redo$$
   - Remove Word
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
+  shortcuts:
+  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ⌘+A
+  - ⌘+S
+  - ⌘+D
+  - ⌘+F
+  - ⌘+G
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - ⌘+Z
+  - ⌘+X
+  - ⌘+C
+  - ⌘+⇧+V
+  - ⌘+B
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - SUPER
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [4, 5]
-  k: $$mdi:content-save-all$$
+  k: ⌘+S
   l: [default]
 - p: [14, 15]
   k: ⇧+↵
@@ -199,7 +236,7 @@ combos:
   k: ⌘+Space
   l: [default]
 - p: [31, 34]
-  k: $$mdi:undo-variant$$
+  k: ⌘+Z
   l: [default]
 - p: [30, 35]
   k: $$mdi:redo$$
@@ -245,12 +282,6 @@ combos:
   l: [default]
 - p: [17, 18]
   k: ']'
-  l: [default]
-- p: [21, 22]
-  k: $$mdi:content-copy$$
-  l: [default]
-- p: [22, 23]
-  k: $$mdi:content-paste$$
   l: [default]
 - p: [27, 28]
   k: ''''

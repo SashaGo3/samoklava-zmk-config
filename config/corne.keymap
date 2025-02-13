@@ -9,6 +9,7 @@
 #define NAV     2
 #define MEDIA   3
 #define FUN     4
+#define SHRTC   5
 
 #include "keys/36.h"
 #include "includes/macros.dtsi"
@@ -16,18 +17,18 @@
 #include "includes/behaviors.dtsi"
 
 
-// Mod taps              hold     tap
-#define BSPC_SP   &mt    SPACE    BSPC  
-#define TAB_SHFT  &mt    LSHFT    TAB
+// Mod taps               hold     tap
+#define SHRTC_BSPS &ltr   SHRTC    BSPC
+#define TAB_SHFT   &mt    LSHFT    TAB
 
 
-// Layers toggles       hold     tap
-#define MEDIA_L  &ltr   MEDIA    LG(C)
-#define MEDIA_R  &ltr   MEDIA    LBKT
-#define SP_NAV   &ltr   NAV      SPACE
-#define COM_FUN  &ltsk  FUN      LGUI   // sticky
-#define SHFT_NUM &ltsk  NUM      LSHFT  // sticky
-#define MEDIA_Q  &ltr MEDIA  Q
+// Layers toggles         hold     tap
+#define MEDIA_L    &ltr   MEDIA    LG(C)
+#define MEDIA_R    &ltr   MEDIA    LBKT
+#define SP_NAV     &ltr   NAV      SPACE
+#define COM_FUN    &ltsk  FUN      LGUI   // sticky
+#define SHFT_NUM   &ltsk  NUM      LSHFT  // sticky
+#define MEDIA_Q    &ltr MEDIA  Q
 
 
 // shorter codes
@@ -35,6 +36,7 @@
 #define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
 #define ___      &trans      //  transparent 
 #define _x_      &none
+#define SUPER    &kp  LS(LG(LC(LALT)))
 
 // Home row mods
 #define HRML(k1, k2, k3, k4) &hml LGUI  k1  &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
@@ -65,13 +67,23 @@
 // 3 Rows
 #define VOLUME_CONTROL_______________                      &kp K_VOL_DN    &kp K_MUTE          &kp K_VOL_UP  
 #define PLAY_CONTROL_________________                      &kp  C_PREV     &kp  C_PLAY_PAUSE   &kp  C_NEXT
-#define COPY_PASTE___________________                      &kp LG(X)       &kp LG(C)           &kp LG(V)            
+//#define COPY_PASTE___________________                      &kp LG(X)       &kp LG(C)           &kp LG(V)            
 
 // Number pad
 #define NUMBER_LEFT______________________________________  &kp N1    &kp N2    &kp N3  &kp N4    &kp N5
 #define NUMBER_RIGHT_____________________________________  &kp N6    &kp N7    &kp N8  &kp N9    &kp N0
 
 #define BRIGHTNESS_________ &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
+
+// Shortcuts Layer
+#define SHORTCUTS_TOP_ROW_L______________________________  &kp ESC     &none     &none     &none     &none
+#define SHORTCUTS_MIDDLE_ROW_L___________________________  &kp LG(A)   &kp LG(S) &kp LG(D) &kp LG(F)  &kp LG(G)
+#define SHORTCUTS_BOTTOM_ROW_L___________________________  &kp LG(Z)   &kp LG(X) &kp LG(C) &kp LG(LS(V)) &kp LG(B)  
+
+#define SHORTCUTS_TOP_ROW_R______________________________  &none     &none     &none     &none     &none
+#define SHORTCUTS_BOTTOM_ROW_R___________________________  &none   &none     &none     &none &none
+
+
 
 / {
   chosen {
@@ -93,7 +105,7 @@
 // │    Z    │    X    │    C    │    V    │    B    │   │    N    │    M    │    ,    │    .    │    /    │
     &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-                        BSPC_SP  SHFT_NUM  TAB_SHFT      SP_NAV  &kp BSPC    COM_FUN 
+                        SHRTC_BSPS  SHFT_NUM  TAB_SHFT      SP_NAV  &kp BSPC    COM_FUN 
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };
@@ -102,9 +114,9 @@
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
     NUMBER_LEFT______________________________________     NUMBER_RIGHT_____________________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-    NUMBER_RIGHT_____________________________________    &kp ESC    RIGHT_ACTIONS__________________________
+    NUMBER_RIGHT_____________________________________    &none    RIGHT_ACTIONS__________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-    NOP______________________________________________    &kp COLON  &kp DQT  &kp COMMA &kp DOT  &kp FSLH
+    NOP______________________________________________    &kp DQT   &kp COLON  &kp COMMA &kp DOT  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
                            _x_       ___       _x_       &kp SPACE  &kp BSPC  &kp DEL  
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
@@ -124,10 +136,10 @@
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };
-    media_layer { // layer 5 (media)
+    media_layer { // layer 3 (media)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-       ___    COPY_PASTE___________________   _x_        BRIGHTNESS_________    _x_       _x_   &kp LG(LC(Q))
+       ___    NOP_4__________________________________    BRIGHTNESS_________    _x_       _x_   &kp LG(LC(Q))
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
        _x_    DESKTOP_ACTIONS________________________        _x_    DESKTOP_ACTIONS________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
@@ -137,7 +149,7 @@
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };
-    function_layer { // layer 6 (function)
+    function_layer { // layer 4 (function)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
     FUNC_3__________________________________ _x_           NOP______________________________________________
@@ -146,8 +158,22 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
     FUNC_1__________________________________&kp CAPSLOCK BLUETOOTH________________________________________
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                       Undo │  Redo  │   Remove Word   │   │    NOP  │   NOP   │   FUN   │
-                      &kp LG(Z) &kp LG(LS(Z)) &kp LA(BSPC)           _x_       _x_       ___
+//                   Undo │  Redo  │   Remove Word   │   │    NOP  │   NOP   │   LAYER   │
+               &kp LG(Z) &kp LG(LS(Z)) &kp LA(BSPC)           _x_       _x_       ___
+//                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
+      >;
+    };
+    shortcuts_layer { // layer 5 (shortcuts)
+      bindings = <
+// ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
+    SHORTCUTS_TOP_ROW_L______________________________      &none     &none     &none     &none     &none 
+// ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+    SHORTCUTS_MIDDLE_ROW_L___________________________      &none    RIGHT_ACTIONS__________________________
+// ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+    SHORTCUTS_BOTTOM_ROW_L___________________________     &none     &none     &none     &none     &none 
+// ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
+//                         LAYER │  NOP    │   NOP   │   |    NOP  │   NOP   │   NOP   │
+                          ___    &none       &none           SUPER       &none       &none
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };

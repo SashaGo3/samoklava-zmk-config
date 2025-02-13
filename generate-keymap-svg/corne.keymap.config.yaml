@@ -534,5 +534,16 @@ parse_config:
     LS(LG(N1)): "Screenshot"
     LA(BSPC): "Remove Word"
     LG(SPACE): "⌘+Space"
+    LG(A): "⌘+A"
+    LG(S): "⌘+S"
+    LG(D): "⌘+D"
+    LG(F): "⌘+F"
+    LG(G): "⌘+G"
+    LG(Z): "⌘+Z"
+    LG(X): "⌘+X"
+    LG(C): "⌘+C"
+    LG(LS(V)): "⌘+⇧+V"
+    LG(B): "⌘+B"
+    LS(LG(LC(LALT))): "SUPER"
 
   zmk_combos: {}

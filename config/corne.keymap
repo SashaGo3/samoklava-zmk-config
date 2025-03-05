@@ -36,7 +36,7 @@
 #define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
 #define ___      &trans      //  transparent 
 #define _x_      &none
-#define SUPER    &kp  LS(LG(LC(LALT)))
+#define SUPER    &ltsk NAV LS(LG(LC(LALT)))
 
 // Home row mods
 #define HRML(k1, k2, k3, k4) &hml LGUI  k1  &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
@@ -105,7 +105,7 @@
 // │    Z    │    X    │    C    │    V    │    B    │   │    N    │    M    │    ,    │    .    │    /    │
     &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-                        SHRTC_BSPS  SHFT_NUM  TAB_SHFT      SP_NAV  &kp BSPC    COM_FUN 
+                        SHRTC_BSPS  SHFT_NUM  TAB_SHFT      SP_NAV  &kp BSPC  COM_FUN 
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };

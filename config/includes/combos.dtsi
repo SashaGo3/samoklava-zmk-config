@@ -59,9 +59,7 @@ ZMK_COMBO(enter, &kp RET, LB0 RB0, DEF)
   ╰───────────╮ LH2 LH1 -< search >- RH1 RH2 ╭───────────╯
               ╰─────────────┴─────────────╯
 */
-ZMK_COMBO(search, &kp LG(SPACE), LH0 RH0, DEF)
-ZMK_COMBO(undo, &kp LG(Z), LH1 RH1, DEF)
-ZMK_COMBO(redo, &kp LG(LS(Z)), LH2 RH2, DEF)
+ZMK_COMBO(undo, &kp LG(SPACE), LH1 RH1, DEF)
 
 
 /*

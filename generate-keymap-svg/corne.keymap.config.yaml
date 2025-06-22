@@ -527,9 +527,10 @@ parse_config:
     LG(LC(Q)): "Lock"
     LG(S): $$mdi:content-save-all$$
     LS(RET): "⇧+↵"
-    LC(UP): "Show apps"
-    LC(LEFT): "⌃+←"
-    LC(RIGHT): "⌃+→"
+    LC(UP): "CTRL ↑"
+    LC(LEFT): "CTRL ←"
+    LC(RIGHT): "CTRL →"
+    LC(DOWN): "CTRL ↓"
     LS(LG(J)): "Meeting"
     LS(LG(N1)): "Screenshot"
     LA(BSPC): "Remove Word"

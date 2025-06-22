@@ -39,8 +39,8 @@
 #define SUPER    &ltsk NAV LS(LG(LC(LALT)))
 
 // Home row mods
-#define HRML(k1, k2, k3, k4) &hml LGUI  k1  &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
-#define HRMR(k1, k2, k3, k4) &hmr RSHFT k1  &hmr RCTRL k2 &hmr RALT  k3 &hmr RGUI  k4
+#define HRML(k1, k2, k3, k4) &hml LCTRL  k1  &hml LALT  k2 &hml LGUI k3 &hml LSHFT k4
+#define HRMR(k1, k2, k3, k4) &hmr RSHFT k1  &hmr RGUI k2 &hmr RALT  k3 &hmr RCTRL  k4
 
 // 5 Rows
 #define NUMBER_TOP_ROW___________________________________  &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   
@@ -48,6 +48,7 @@
 #define NOP______________________________________________  &none     &none     &none     &none     &none  
 #define PAGE_CONTROL_ROW_________________________________  &kp HOME  &kp PG_DN &kp PG_UP  &kp END  &kp INS    
 #define BLUETOOTH________________________________________  &bt BT_PRV  &bt BT_NXT  &out OUT_USB  &out OUT_BLE  &bt BT_CLR_ALL 
+#define BLUETOOTH_TOP____________________________________  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4 &bt BT_SEL 0
 
 
 // 4 Rows
@@ -152,7 +153,7 @@
     function_layer { // layer 4 (function)
       bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
-    FUNC_3__________________________________ _x_           NOP______________________________________________
+    FUNC_3__________________________________ _x_           BLUETOOTH_TOP____________________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
     FUNC_2__________________________________   _x_           _x_    RIGHT_ACTIONS__________________________
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
